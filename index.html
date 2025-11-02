@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jinu Kpop 🌌 — Personal</title>
+
+  <!-- Google font (optional but common) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- SEO / Social -->
+  <meta name="description" content="Jinu Kpop — tech enthusiast, KPDH fan, music & projects.">
+</head>
+<body>
+  <!-- Welcome / Intro overlay -->
+  <div id="welcome" class="screen">
+    <canvas id="welcome-canvas" aria-hidden="true"></canvas>
+
+    <div class="welcome-inner" role="region" aria-label="Welcome">
+      <h1 class="title">Welcome to Jinu Kpop 🌌</h1>
+      <p class="subtitle">Tech, tunes and positive vibes — enter to explore.</p>
+      <div class="welcome-actions">
+        <button id="enterBtn" class="btn primary" aria-label="Enter site">Enter</button>
+        <button id="skipBtn" class="btn ghost" aria-label="Skip animations">Quick enter</button>
+      </div>
+      <div class="hint">Tip: move the mouse to make stars follow ✨</div>
+    </div>
+  </div>
+
+  <!-- Main site -->
+  <div id="site" class="hidden" aria-hidden="true">
+    <!-- Background canvas for subtle parallax/particles behind content -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- Sticky nav -->
+    <header class="nav-wrap">
+      <nav class="nav container" role="navigation" aria-label="Main navigation">
+        <div class="brand" tabindex="0" aria-label="Home (Jinu Kpop)">
+          <img src="assets/profile.jpg" alt="Jinu Kpop" class="nav-avatar">
+          <span class="brand-name">Jinu Kpop</span>
+        </div>
+
+        <ul class="nav-links" role="menubar">
+          <li role="none"><a role="menuitem" href="#about">About</a></li>
+          <li role="none"><a role="menuitem" href="#music">Music</a></li>
+          <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button id="themeToggle" class="icon-btn" aria-pressed="false" title="Toggle theme" aria-label="Toggle theme">
+            <!-- simple sun/moon svg -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page content (scrollable) -->
+    <main class="main container" id="mainContent">
+      <!-- ABOUT -->
+      <section id="about" class="section glass reveal">
+        <div class="about-grid">
+          <div class="photo-wrap">
+            <div class="photo-outer">
+              <img src="assets/profile.jpg" alt="Jinu Kpop profile photo" class="profile-photo" />
+            </div>
+            <div class="floating-badge">Sky Blue • KPDH Fan</div>
+          </div>
+
+          <div class="about-text">
+            <h2>Hello — I’m Jinu!</h2>
+            <p>
+              Tech runs through my veins. Whenever there’s a new gadget, app, or breakthrough, I’m on it—testing, exploring,
+              and geeking out like there’s no tomorrow. Technology isn’t just what I do; it’s how I see the world.
+            </p>
+            <p>
+              I’m friendly, positive, and open-minded, but here’s the deal: life’s too short for negativity, so I don’t have time for
+              hate or toxic vibes. Keep it kind, or keep walking!
+            </p>
+            <p>
+              Big fan alert: I absolutely love <strong>KPDH (K-Pop Demon Hunter)</strong> from Sony Animation. Its energy, story, and style?
+              Legendary. Oh, and my favorite color? <em>Sky blue</em>—calm, limitless, and inspiring.
+            </p>
+            <p>
+              This space is where I share my tech obsessions, discoveries, and ideas—all served with a dash of positivity and curiosity.
+              So stick around, explore, and let’s see what’s possible together!
+            </p>
+
+            <div class="links-row" aria-label="External links">
+              <a class="social" href="https://discord.gg/UEFJc6AdS9" target="_blank" rel="noopener" aria-label="Discord community">
+                <!-- Discord icon -->
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 10.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm12 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM21 3s-1.5-1-4-1-4 1-4 1H11S9.5 2 7 2 3 3 3 3 2 8 2 13v1s.5 6 9 6 9-6 9-6v-1c0-5-1-10-1-10z" fill="currentColor"/></svg>
+                Discord
+              </a>
+
+              <a class="social" href="https://github.com/Jinu-Kpop" target="_blank" rel="noopener" aria-label="GitHub profile">
+                <!-- GitHub icon -->
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.14-1.11-1.44-1.11-1.44-.91-.62.07-.6.07-.6 1.01.07 1.54 1.04 1.54 1.04.9 1.53 2.36 1.09 2.94.83.09-.64.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.93 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.71.115 2.51.337 1.9-1.3 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.83-2.34 4.67-4.57 4.92.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48A10 10 0 0012 2z"/></svg>
+                GitHub
+              </a>
+
+              <a class="social" href="https://open.spotify.com/user/31dqjjdh6z7iv6h2uicfxpzorwpi" target="_blank" rel="noopener" aria-label="Spotify profile">
+                <!-- Spotify icon -->
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm4.6 14.7a.9.9 0 01-1.2.3c-3.3-2-7.5-2.2-10.5-.6a.9.9 0 11-.8-1.6c3.7-1.8 8.7-1.6 12.2.8a.9.9 0 01.3 1.1zM17.5 11a.9.9 0 01-1.2.4c-3-1.7-7.9-1.9-10.9-.5a.9.9 0 11-.8-1.6c3.6-1.6 9-1.3 12.4.7a.9.9 0 01.5 1z"/></svg>
+                Spotify
+              </a>
+
+              <a class="social" href="https://open.spotify.com/playlist/6NzQaVaofrf9kpRCx0sKkj" target="_blank" rel="noopener" aria-label="KPDH Popular Songs">
+                Playlist
+              </a>
+
+              <a class="social" href="https://open.spotify.com/playlist/6z81HIUuSRHymGh8D5lX1t" target="_blank" rel="noopener" aria-label="All KPDH Songs">
+                All KPDH
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MUSIC -->
+      <section id="music" class="section glass reveal">
+        <h3>Music</h3>
+        <p>Background track plays while you browse. Use controls to pause, mute, or skip.</p>
+
+        <div class="music-player" role="region" aria-label="Music player">
+          <audio id="bgAudio" src="assets/song.mp3" preload="auto" loop></audio>
+
+          <div class="controls">
+            <button id="playBtn" class="icon-btn" aria-label="Play/Pause">
+              <svg id="playIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v18l15-9z"/></svg>
+              <svg id="pauseIcon" viewBox="0 0 24 24" aria-hidden="true" style="display:none"><path d="M6 19h4V5H6zm8-14v14h4V5z"/></svg>
+            </button>
+
+            <div class="progress-wrap">
+              <input id="progress" type="range" min="0" max="100" value="0" aria-label="Music progress">
+              <div class="time" id="timeLabel">0:00 / 0:00</div>
+            </div>
+
+            <div class="vol-wrap">
+              <button id="muteBtn" class="icon-btn" aria-label="Mute/unmute">🔊</button>
+              <input id="volume" type="range" min="0" max="1" step="0.01" value="0.6" aria-label="Volume">
+            </div>
+
+            <button id="loopBtn" class="btn mini" aria-pressed="true">Loop</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section reveal">
+        <h3>Projects</h3>
+        <div class="projects-grid">
+          <article class="card glass">
+            <h4>Clone Kingdom Tycoon (Roblox)</h4>
+            <p>Simulator + tycoon with cloning & PvP features. Active project.</p>
+            <div class="card-actions">
+              <a href="https://github.com/Jinu-Kpop" target="_blank" rel="noopener">View on GitHub</a>
+            </div>
+          </article>
+
+          <article class="card glass">
+            <h4>Website — This Portfolio</h4>
+            <p>Modern glass design, interactive starfield, music controls and responsive layout.</p>
+            <div class="card-actions">
+              <a href="https://github.com/Jinu-Kpop" target="_blank" rel="noopener">Source</a>
+            </div>
+          </article>
+
+          <!-- add more cards as needed -->
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section glass reveal">
+        <h3>Contact</h3>
+        <p>Connect via Discord or GitHub — I reply to friendly, positive messages.</p>
+        <div class="contact-actions">
+          <a class="btn primary" href="https://discord.gg/UEFJc6AdS9" target="_blank" rel="noopener">Join Discord</a>
+          <a class="btn ghost" href="mailto:youremail@example.com">Email me</a>
+          <a class="btn" href="https://github.com/Jinu-Kpop" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <small>© <span id="year"></span> Jinu Kpop — made with ☕ & code</small>
+      </footer>
+    </main>
+
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">↑</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+</body>
+</html>
